@@ -226,7 +226,7 @@
                         }
                     ]
                 },
-                "Actual_Consumed": {
+                "Actual_Consumption": {
                     "allOf": [
                         {
                             "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
