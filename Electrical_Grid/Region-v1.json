@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Electrical_Grid/Region-v1.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Region of grid",
+  "title": "Electrical Grid Region",
   "type": "object",
   "properties": {
     "Schema_UUID": {
