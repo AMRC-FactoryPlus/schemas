@@ -1,19 +1,16 @@
 {
-  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Power/Power_Monitoring-v1.json",
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Electrical_Grid/Region-v1.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Power Monitoring",
+  "title": "Region of grid",
   "type": "object",
   "properties": {
     "Schema_UUID": {
-      "const": "e941982b-8211-450b-b70b-6127f51df4ea"
+      "const": "a15a0500-88ee-4e56-af43-224a874ccf32"
     },
     "Instance_UUID": {
       "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
       "type": "string",
       "format": "uuid"
-    },
-    "Device_Information": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
     },
     "Carbon_Intensity": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Electrical_Grid/Carbon_Intensity-v1.json"
