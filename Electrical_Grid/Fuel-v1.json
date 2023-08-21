@@ -26,7 +26,7 @@
                             ]
                         },
                         "Documentation": {
-                            "default": "Actual carbon intensity"
+                            "default": "Percentage of fuel on generation mix"
                         }
                     }
                 }
@@ -46,7 +46,7 @@
                             ]
                         },
                         "Documentation": {
-                            "default": "Forecast carbon intensity"
+                            "default": "Generated power of particular fuel"
                         }
                     }
                 }
