@@ -1,0 +1,17 @@
+name: Validate
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  # Check
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    container: node:16
+    steps:
+      - run: cd validate
+      - run: npm install --save=false
+      - run: node validate.js
