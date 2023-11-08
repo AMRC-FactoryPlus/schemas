@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container: node:16
     steps:
+      - uses: actions/checkout@v3
       - run: cd validate
       - run: npm install --save=false
       - run: node validate.js
