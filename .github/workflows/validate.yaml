@@ -13,6 +13,4 @@ jobs:
     container: node:16
     steps:
       - uses: actions/checkout@v3
-      - run: cd validate
-      - run: npm install --save=false
-      - run: node validate.js
+      - run: cd validate && npm install --save=false && node validate.js
