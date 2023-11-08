@@ -14,7 +14,7 @@
         },
         "Device_Information": {
             "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
-        }
+        },
         "Job_Info": {
             "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/3D_Printer/Job_Info-v1.json"
         },
