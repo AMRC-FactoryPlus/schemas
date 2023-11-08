@@ -1,72 +1,60 @@
 {
-    "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/PLC/PLC-v1.json",
+    "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Electrical_Grid/Fuel-v1.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "PLC",
+    "title": "Fuel",
     "type": "object",
     "properties": {
         "Schema_UUID": {
-            "const": "f08c79a8-997d-4556-8673-941e27bd63eb"
+            "const": "a6cc8a36-fa97-4157-a277-27468bd08b8a"
         },
         "Instance_UUID": {
             "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
             "type": "string",
             "format": "uuid"
         },
-        "Device_Information": {
-            "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
-        },
-        "Heartbeat_Active": {
+        "Percentage": {
             "allOf": [
                 {
                     "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
                 },
                 {
-                    "type": "object",
                     "properties": {
                         "Sparkplug_Type": {
                             "enum": [
-                                "Boolean"
+                                "FloatLE",
+                                "FloatBE"
                             ]
                         },
                         "Documentation": {
-                            "default": "Whether we have a good connection to the cell."
+                            "default": "Percentage of fuel on generation mix"
                         }
                     }
                 }
             ]
         },
-        "Heartbeat_Value": {
+        "Power": {
             "allOf": [
                 {
                     "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
                 },
                 {
-                    "type": "object",
                     "properties": {
                         "Sparkplug_Type": {
                             "enum": [
-                                "UInt8"
+                                "FloatLE",
+                                "FloatBE"
                             ]
                         },
                         "Documentation": {
-                            "default": "The value of the PLC heartbeat (deprecated)."
+                            "default": "Generated power of particular fuel"
                         }
                     }
                 }
             ]
-        },
-        "Status_Flags": {
-            "type": "object",
-            "patternProperties": {
-                "^[a-zA-Z0-9_]*$": {
-                    "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/PLC/Status_Flag-v1.json"
-                }
-            }
         }
     },
     "required": [
         "Schema_UUID",
-        "Instance_UUID",
-        "Device_Information"
+        "Instance_UUID"
     ]
 }
