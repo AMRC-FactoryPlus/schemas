@@ -27,7 +27,7 @@
             ],
             "minLength": 1
         },
-        "EtherNetIpConnDetails": {
+        "EtherNetIPConnDetails": {
             "type": "object",
             "title": "EtherNet/IP Connection Details",
             "options": {
