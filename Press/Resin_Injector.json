@@ -1,0 +1,267 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/undefined",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "2f1d144d-21d4-435c-8401-ff20d4111b85"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "2b3aa2a8-ae9d-4871-9ddd-5f2620be4c47": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Part shot running"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Boolean"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "62a65ff1-7e48-49e7-aa59-d54e82ccf586": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Part shot finished"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Boolean"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "a4ad249f-967f-43cb-87f1-3804c0efb127": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Resin_Head.json"
+        }
+      },
+      "type": "object"
+    },
+    "50c9252e-b96c-447d-9644-be8c915528b3": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Resin Temperature"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Int8",
+                "Int16LE",
+                "Int16BE",
+                "Int32LE",
+                "Int32BE",
+                "Int64LE",
+                "Int64BE",
+                "UInt8",
+                "UInt16LE",
+                "UInt16BE",
+                "UInt32LE",
+                "UInt32BE",
+                "UInt64LE",
+                "FloatLE",
+                "UInt64BE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "0e35f5b0-3475-4d3e-b9ec-3da02ddd5128": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Hardener Temperature"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Int8",
+                "Int16LE",
+                "Int16BE",
+                "Int32LE",
+                "Int32BE",
+                "Int64LE",
+                "Int64BE",
+                "UInt8",
+                "UInt16LE",
+                "UInt16BE",
+                "UInt32LE",
+                "UInt64LE",
+                "UInt32BE",
+                "UInt64BE",
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "fca46069-e4af-457b-8865-b00d8377b9c1": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Resin Flow"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "DoubleBE",
+                "DoubleLE",
+                "FloatBE",
+                "FloatLE",
+                "UInt64BE",
+                "UInt64LE",
+                "UInt32BE",
+                "UInt32LE",
+                "UInt16BE",
+                "UInt16LE",
+                "UInt8",
+                "Int64BE",
+                "Int64LE",
+                "Int32BE",
+                "Int32LE",
+                "Int16BE",
+                "Int16LE",
+                "Int8"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "6d1c75b9-caa5-4f07-bc64-3cf494ceb8e0": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Hardener Flow"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Int8",
+                "Int16LE",
+                "Int16BE",
+                "Int32LE",
+                "Int32BE",
+                "Int64LE",
+                "Int64BE",
+                "UInt8",
+                "UInt16LE",
+                "UInt16BE",
+                "UInt32LE",
+                "UInt32BE",
+                "UInt64LE",
+                "UInt64BE",
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "f61ef2b1-157e-4659-82dc-c06db7a0da96": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Total Resin Vol Delivered"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Int8",
+                "Int16LE",
+                "Int16BE",
+                "Int32LE",
+                "Int32BE",
+                "Int64LE",
+                "Int64BE",
+                "UInt8",
+                "UInt16LE",
+                "UInt16BE",
+                "UInt32LE",
+                "UInt32BE",
+                "UInt64LE",
+                "FloatLE",
+                "UInt64BE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            },
+            "Eng_Unit": {
+              "default": "kg"
+            }
+          }
+        }
+      ]
+    },
+    "d55f8999-af43-46ec-9e0a-ca449961e2a4": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Injection Cycle Running"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Boolean"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/undefined",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "933936b9-9ed0-43c5-a09d-d01bec7e5bd6"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "df651e73-8b9d-4865-9f25-3704ddf4f115": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Resin Pressure"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "5e2e4a91-0239-4146-9148-507a90ef0c52": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Hardener Pressure"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
