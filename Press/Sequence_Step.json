@@ -1,0 +1,98 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/undefined",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "c0bddc80-942b-49df-a5a3-f8d4de1a86fb"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "1204b8d6-db17-4baf-b49e-e5132ae1bd88": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Sequence Step No"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Int16LE",
+                "Int16BE",
+                "Int8",
+                "Int32LE",
+                "Int32BE",
+                "Int64LE",
+                "Int64BE",
+                "UInt8",
+                "UInt16LE",
+                "UInt16BE",
+                "UInt32LE",
+                "UInt32BE",
+                "UInt64LE",
+                "UInt64BE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "e6efd908-aadc-4b49-a83b-d14742415881": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Sequence Timer"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            },
+            "Eng_Unit": {
+              "default": "s"
+            }
+          }
+        }
+      ]
+    },
+    "8a3292a1-2a56-4cc6-a1cd-f48c02fd5561": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Step Timer"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
