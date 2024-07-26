@@ -1,0 +1,101 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Press.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "976568c5-e1e3-4723-b979-f4baca7eb261"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "506c67c6-073a-42ec-a628-9f07ba2521e7": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Hydraulics/Cylinder_Group.json"
+    },
+    "52873138-ce37-48e8-8092-1d80c631c9ae": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Part Number"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "4916656a-06e8-4587-9ad1-192901b4c484": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Sequence.json"
+    },
+    "e61f88c8-aa2b-4d1b-87ae-380d057bf37a": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Vacuum_Cavity_Pressure.json"
+        }
+      },
+      "type": "object"
+    },
+    "948f3175-aa3e-486a-adc6-0dcc6ab26425": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Resin_Injector.json"
+        }
+      },
+      "type": "object"
+    },
+    "1e49e30a-8b92-4648-9d6f-80564d3a1039": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Ejector_Cyclinder_Positions.json"
+    },
+    "6a15f880-3a25-40a7-9caa-6de51bf352ff": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Evacuation_Plug_Positions.json"
+    },
+    "6182d328-5416-4ed9-a5fb-56709b0bd82e": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Tool_Temperature.json"
+        }
+      },
+      "type": "object"
+    },
+    "91a6d4a4-8c4c-4ee9-8513-156b3e1a13bc": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Tool_Temperature_Setpoint.json"
+        }
+      },
+      "type": "object"
+    },
+    "4b969fa6-233d-443b-9c95-a6d32e2cbaab": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Heater_Operation_State.json"
+        }
+      },
+      "type": "object"
+    },
+    "cb55bc1e-0d5f-4d02-9347-880af5d3ab84": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Heater_Flow_Rate.json"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}

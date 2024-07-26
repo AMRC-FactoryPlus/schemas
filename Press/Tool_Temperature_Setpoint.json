@@ -1,0 +1,63 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Tool_Temperature_Setpoint.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "35c53d6e-976f-45d7-80e7-56b129db357a"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "3d9e79f4-5736-4e4d-9367-777eb46c055a": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Temperature Setpoint"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "DoubleBE",
+                "DoubleLE",
+                "FloatBE",
+                "FloatLE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "4a371359-e041-4d96-8f9d-d28457ce2d08": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": "Temperature Signal"
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "DoubleLE",
+                "DoubleBE",
+                "FloatBE",
+                "FloatLE"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
