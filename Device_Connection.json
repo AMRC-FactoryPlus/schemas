@@ -540,6 +540,7 @@
             }
         },
         "DriverDetails": {
+            "title": "Driver Details",
             "type": "object",
             "options": {
                 "dependencies": {
