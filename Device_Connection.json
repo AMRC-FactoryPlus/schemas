@@ -548,6 +548,6 @@
                     "payloadFormat": "Delimited String"
                 }
             }
-        },
+        }
     }
 }
