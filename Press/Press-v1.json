@@ -2,10 +2,15 @@
   "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Press-v1.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": [
-    "Schema_UUID",
-    "Instance_UUID"
-  ],
+  "properties": {
+    "Schema_UUID": {
+      "const": "c8318a2e-ceb8-46cb-89d8-3483ce1840a4"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
   "Tools": {
     "Schema_UUID": {
       "const": "c8318a2e-ceb8-46cb-89d8-3483ce1840a4"
@@ -68,8 +73,6 @@
           }
         }
       ],
-      "uuid": "a9d2f476-25fe-49ba-a1d4-a70ea48c756a",
-      "index": 0
     },
     "Cylinder_Position": {
       "allOf": [
@@ -89,8 +92,6 @@
           }
         }
       ],
-      "uuid": "49aa6073-a219-4722-8968-de999b1079cc",
-      "index": 1
     },
     "Tool_Gap": {
       "allOf": [
@@ -113,8 +114,6 @@
           }
         }
       ],
-      "uuid": "041c5acd-07bd-4975-a2e2-89da4b6e693c",
-      "index": 2
     },
     "Sequence_Step": {
       "allOf": [
@@ -140,8 +139,6 @@
           }
         }
       ],
-      "uuid": "12983e86-90b1-4835-a161-c1dffb59d79c",
-      "index": 3
     },
     "Sequence_Timer": {
       "allOf": [
@@ -164,8 +161,6 @@
           }
         }
       ],
-      "uuid": "2bb9eec1-1298-4215-9753-025f5d23618e",
-      "index": 4
     },
     "Step_Timer": {
       "allOf": [
@@ -188,8 +183,6 @@
           }
         }
       ],
-      "uuid": "152138f2-1be9-4be1-a6e4-14bb3a85b663",
-      "index": 5
     },
     "Healthy": {
       "allOf": [
@@ -209,8 +202,6 @@
           }
         }
       ],
-      "uuid": "5cb7a9f7-93e6-47de-9b44-035f7d456f43",
-      "index": 6
     },
     "In_Auto_Sequence": {
       "allOf": [
@@ -230,8 +221,6 @@
           }
         }
       ],
-      "uuid": "c9713529-a6e1-4fed-bdb3-877c773876ca",
-      "index": 7
     },
     "Ejectors": {
       "type": "object",
@@ -254,8 +243,6 @@
               }
             }
           ],
-          "uuid": "4dd1c334-a8d9-48a8-8584-792636a524e9",
-          "index": 0
         },
         "Lowered": {
           "allOf": [
@@ -275,8 +262,6 @@
               }
             }
           ],
-          "uuid": "17e3836d-45b8-43aa-8a5e-add00d0d446a",
-          "index": 1
         }
       },
       "required": []
