@@ -63,7 +63,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "Cylinder_Position": {
       "allOf": [
@@ -82,7 +82,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "Tool_Gap": {
       "allOf": [
@@ -104,7 +104,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "Sequence_Step": {
       "allOf": [
@@ -129,7 +129,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "Sequence_Timer": {
       "allOf": [
@@ -151,7 +151,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "Step_Timer": {
       "allOf": [
@@ -173,7 +173,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "Healthy": {
       "allOf": [
@@ -192,7 +192,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "In_Auto_Sequence": {
       "allOf": [
@@ -211,7 +211,7 @@
             }
           }
         }
-      ],
+      ]
     },
     "Ejectors": {
       "type": "object",
@@ -233,7 +233,7 @@
                 }
               }
             }
-          ],
+          ]
         },
         "Lowered": {
           "allOf": [
@@ -252,20 +252,24 @@
                 }
               }
             }
-          ],
+          ]
         }
       },
       "required": []
     },
     "Heaters": {
-      "uuid": "429529d2-fb55-4b07-80b8-a145d931fbef",
-      "index": 15,
-      "patternProperties": {
-        "^[a-zA-Z0-9_]*$": {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Heater-v1.json"
-        }
-      },
-      "type": "object"
-    }
+    "uuid": "429529d2-fb55-4b07-80b8-a145d931fbef",
+    "index": 15,
+    "patternProperties": {
+      "^[a-zA-Z0-9_]*$": {
+        "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Heater-v1.json"
+      }
+    },
+    "type": "object"
   }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
 }
