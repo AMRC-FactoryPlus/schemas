@@ -11,15 +11,6 @@
       "type": "string",
       "format": "uuid"
     },
-  "Tools": {
-    "Schema_UUID": {
-      "const": "c8318a2e-ceb8-46cb-89d8-3483ce1840a4"
-    },
-    "Instance_UUID": {
-      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
-      "type": "string",
-      "format": "uuid"
-    },
     "Tools": {
       "patternProperties": {
         "^[a-zA-Z0-9_]*$": {
