@@ -258,8 +258,6 @@
       "required": []
     },
     "Heaters": {
-    "uuid": "429529d2-fb55-4b07-80b8-a145d931fbef",
-    "index": 15,
     "patternProperties": {
       "^[a-zA-Z0-9_]*$": {
         "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Heater-v1.json"
