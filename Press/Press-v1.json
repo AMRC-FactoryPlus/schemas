@@ -256,7 +256,15 @@
         }
       },
       "required": []
-    }
+    },
+    "Heaters": {
+    "patternProperties": {
+      "^[a-zA-Z0-9_]*$": {
+        "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Press/Heater-v1.json"
+      }
+    },
+    "type": "object"
+  }
   },
   "required": [
     "Schema_UUID",
