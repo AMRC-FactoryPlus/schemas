@@ -27,7 +27,15 @@
           "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
         }
       }
+    },
+    "Pressure": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Pressure-v1.json"
     }
+  },
+  "type": "object"
+}
   },
   "required": [
     "Schema_UUID",
