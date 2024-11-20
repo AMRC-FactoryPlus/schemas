@@ -1,0 +1,81 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Plant-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "286772f0-1c4e-485e-99dc-339c08296596"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "Sensors": {
+      "type": "object",
+      "properties": {
+        "Temperature": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+            }
+          },
+          "type": "object"
+        },
+        "Pressure": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Pressure-v1.json"
+            }
+          },
+          "type": "object"
+        },
+        "Flow": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Flow-v1.json"
+            }
+          },
+          "type": "object"
+        },
+        "Humidity": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Humidity-v1.json"
+            }
+          },
+          "type": "object"
+        },
+        "Vibration": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Vibration-v1.json"
+            }
+          },
+          "type": "object"
+        },
+        "Level": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Level-v1.json"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": []
+    },
+    "Pumps": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Pumps-v1.json"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
