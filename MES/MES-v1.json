@@ -1,0 +1,37 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/MES/MES-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "559235b7-fb85-4cb2-ad47-24542f14dcbf"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "Device_Information": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
+    },
+    "Active": {
+      "type": "object",
+      "properties": {
+        "Work_Order": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/MES/Work_Order-v1.json"
+        },
+        "Operation": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/MES/Operation-v1.json"
+        },
+        "Step": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/MES/Step-v1.json"
+        }
+      },
+      "required": []
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
