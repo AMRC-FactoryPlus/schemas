@@ -2,11 +2,7 @@
   "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Pump-v1.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": [
-    "Schema_UUID",
-    "Instance_UUID"
-  ],
-  "Temperature": {
+  "Properties": {
     "Schema_UUID": {
       "const": "5d974f49-d6ed-4b59-9413-4ff084e5da55"
     },
@@ -134,8 +130,12 @@
       "uuid": "2225f645-bf5c-4362-b9b8-bc6758a9e255",
       "index": 3
     },
-    "Temperature": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
-    }
+      "Temperature": {
+    "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
   }
+},
+"required": [
+  "Schema_UUID",
+  "Instance_UUID"
+]
 }
