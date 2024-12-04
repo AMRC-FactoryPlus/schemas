@@ -2,7 +2,11 @@
   "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Pump-v1.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "properties": {
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ],
+  "Temperature": {
     "Schema_UUID": {
       "const": "5d974f49-d6ed-4b59-9413-4ff084e5da55"
     },
@@ -14,12 +18,124 @@
     "Device_Information": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
     },
+    "Pump_Status": {
+      "uuid": "aacda93e-96f5-408f-a917-bdd6829594c7",
+      "index": 9,
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/State-v1.json"
+        }
+      },
+      "type": "object"
+    },
     "Motor": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Commanded_Value-v1.json"
+    },
+    "Crest": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleBE",
+                "DoubleLE"
+              ]
+            },
+            "Eng_Unit": {
+              "default": "V"
+            }
+          }
+        }
+      ],
+      "uuid": "1e4c9e61-067e-4b99-9a35-69babe805483",
+      "index": 0
+    },
+    "Fatigue": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatBE",
+                "FloatLE",
+                "DoubleBE",
+                "DoubleLE"
+              ]
+            }
+          }
+        }
+      ],
+      "uuid": "982aeb9c-558e-4856-8cc2-fbb51ff85181",
+      "index": 1
+    },
+    "Friction": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "String",
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            },
+            "Eng_Unit": {
+              "default": "A"
+            }
+          }
+        }
+      ],
+      "uuid": "24c64c61-dcc2-4ca7-a62a-d12b74b29124",
+      "index": 2
+    },
+    "Impact": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ],
+      "uuid": "2225f645-bf5c-4362-b9b8-bc6758a9e255",
+      "index": 3
+    },
+    "Temperature": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
     }
-  },
-  "required": [
-    "Schema_UUID",
-    "Instance_UUID"
-  ]
+  }
 }
