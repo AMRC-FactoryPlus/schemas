@@ -36,7 +36,8 @@
                 "UInt32LE",
                 "UInt32BE",
                 "UInt64LE",
-                "UInt64BE"
+                "UInt64BE",
+                "Boolean"
               ]
             }
           }
