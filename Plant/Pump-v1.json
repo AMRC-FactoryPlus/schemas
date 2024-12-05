@@ -15,8 +15,6 @@
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
     },
     "Pump_Status": {
-      "uuid": "aacda93e-96f5-408f-a917-bdd6829594c7",
-      "index": 9,
       "patternProperties": {
         "^[a-zA-Z0-9_]*$": {
           "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/State-v1.json"
@@ -50,9 +48,7 @@
             }
           }
         }
-      ],
-      "uuid": "1e4c9e61-067e-4b99-9a35-69babe805483",
-      "index": 0
+      ]
     },
     "Fatigue": {
       "allOf": [
@@ -74,9 +70,7 @@
             }
           }
         }
-      ],
-      "uuid": "982aeb9c-558e-4856-8cc2-fbb51ff85181",
-      "index": 1
+      ]
     },
     "Friction": {
       "allOf": [
@@ -102,9 +96,7 @@
             }
           }
         }
-      ],
-      "uuid": "24c64c61-dcc2-4ca7-a62a-d12b74b29124",
-      "index": 2
+      ]
     },
     "Impact": {
       "allOf": [
@@ -126,9 +118,7 @@
             }
           }
         }
-      ],
-      "uuid": "2225f645-bf5c-4362-b9b8-bc6758a9e255",
-      "index": 3
+      ]
     },
       "Temperature": {
     "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
