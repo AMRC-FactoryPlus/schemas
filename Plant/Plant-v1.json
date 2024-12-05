@@ -14,6 +14,33 @@
     "Device_Information": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
     },
+    "States": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/State-v1.json"
+        }
+      },
+      "type": "object"
+    },
+    "Device_Manual": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "String"
+              ]
+            }
+          }
+        }
+      ]
+    },
     "Sensors": {
       "type": "object",
       "properties": {
