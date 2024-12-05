@@ -2,7 +2,7 @@
   "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Pump-v1.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "Properties": {
+  "properties": {
     "Schema_UUID": {
       "const": "5d974f49-d6ed-4b59-9413-4ff084e5da55"
     },
