@@ -66,6 +66,46 @@
         }
       },
       "type": "object"
+    },
+    "Air_Sensors": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Flow-v1.json"
+        }
+      },
+      "type": "object"
+    },
+    "Water_Sensors": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Flow-v1.json"
+        }
+      },
+      "type": "object"
+    },
+    "Air_Quality_Sensors": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Air_Quality-v1.json"
+        }
+      },
+      "type": "object"
+    },
+    "Motion_Sensors": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Motion-v1.json"
+        }
+      },
+      "type": "object"
+    },
+    "Volatile_Organic_Compound_Sensors": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Volatile_Organic_Compounds-v1.json"
+        }
+      },
+      "type": "object"
     }
   },
   "required": [
