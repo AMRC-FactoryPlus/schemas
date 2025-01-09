@@ -1,0 +1,107 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Air_Quality-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "64ffd081-716f-458e-80c2-f0b26bb0901e"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "PM1.0": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "DoubleLE",
+                "DoubleBE",
+                "FloatLE",
+                "FloatBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "PM2.5": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "PM4.0": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "PM10.0": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
