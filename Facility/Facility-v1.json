@@ -11,6 +11,9 @@
       "type": "string",
       "format": "uuid"
     },
+    "Device_Information": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
+    },
     "Zones": {
       "patternProperties": {
         "^[a-zA-Z0-9_]*$": {
