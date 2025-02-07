@@ -19,7 +19,7 @@
         {
           "properties": {
             "Documentation": {
-              "default": ""
+              "default": "The concentration of particles with a diameter of 1.0 micrometers or less in the air."
             },
             "Sparkplug_Type": {
               "enum": [
@@ -41,7 +41,7 @@
         {
           "properties": {
             "Documentation": {
-              "default": ""
+              "default": "The concentration of particles with a diameter of 2.5 micrometers or less in the air."
             },
             "Sparkplug_Type": {
               "enum": [
@@ -63,7 +63,7 @@
         {
           "properties": {
             "Documentation": {
-              "default": ""
+              "default": "The concentration of particles with a diameter of 4.0 micrometers or less in the air."
             },
             "Sparkplug_Type": {
               "enum": [
@@ -85,7 +85,7 @@
         {
           "properties": {
             "Documentation": {
-              "default": ""
+              "default": "The concentration of particles with a diameter of 10.0 micrometers or less in the air."
             },
             "Sparkplug_Type": {
               "enum": [

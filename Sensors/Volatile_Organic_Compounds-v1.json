@@ -19,7 +19,7 @@
         {
           "properties": {
             "Documentation": {
-              "default": ""
+              "default": "The percentage of the total volume of air that is made up of volatile organic compounds."
             },
             "Sparkplug_Type": {
               "enum": [
