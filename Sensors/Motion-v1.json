@@ -19,7 +19,7 @@
         {
           "properties": {
             "Documentation": {
-              "default": ""
+              "default": "Whether motion has been detected or not."
             },
             "Sparkplug_Type": {
               "enum": [
