@@ -189,7 +189,7 @@
                     "properties": {
                         "Sparkplug_Type": {
                             "enum": [
-                                "UInt32BE"
+                                "UInt8"
                             ]
                         },
                         "Documentation": {
