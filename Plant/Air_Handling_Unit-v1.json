@@ -1,0 +1,221 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Air_Handling_Unit-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "de7944da-d291-491e-942d-4a7e0390ac3b"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "Device_Information": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
+    },
+    "Intake": {
+      "type": "object",
+      "properties": {
+        "Temperature": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+        },
+        "Damper_Position": {
+          "allOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+            },
+            {
+              "properties": {
+                "Documentation": {
+                  "default": "Position of intake damper"
+                },
+                "Sparkplug_Type": {
+                  "enum": [
+                    "Int8",
+                    "Int16LE",
+                    "Int16BE",
+                    "Int32LE",
+                    "Int32BE",
+                    "Int64LE",
+                    "Int64BE",
+                    "UInt8",
+                    "UInt16LE",
+                    "UInt16BE",
+                    "UInt32LE",
+                    "UInt32BE",
+                    "UInt64LE",
+                    "UInt64BE",
+                    "FloatLE",
+                    "FloatBE",
+                    "DoubleLE",
+                    "DoubleBE"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": []
+    },
+    "Supply": {
+      "type": "object",
+      "properties": {
+        "Temperature": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+        },
+        "Humidity": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Humidity-v1.json"
+        },
+        "Air_Speed": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Flow-v1.json"
+        },
+        "Differential_Pressure": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Pressure-v1.json"
+        },
+        "Low_Pressure_Alarm": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Alert-v1.json"
+        },
+        "High_Pressure_Alarm": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Alert-v1.json"
+        },
+        "Fans": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Fan-v1.json"
+            }
+          },
+          "type": "object"
+        },
+        "Filters": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Filter-v1.json"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": []
+    },
+    "Extraction": {
+      "type": "object",
+      "properties": {
+        "Temperature": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+        },
+        "Air_Speed": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Flow-v1.json"
+        },
+        "Fans": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Fan-v1.json"
+            }
+          },
+          "type": "object"
+        },
+        "Filters": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Filter-v1.json"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": []
+    },
+    "Exhaust": {
+      "type": "object",
+      "properties": {
+        "Damper_Position": {
+          "allOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+            },
+            {
+              "properties": {
+                "Documentation": {
+                  "default": ""
+                },
+                "Sparkplug_Type": {
+                  "enum": [
+                    "Int8",
+                    "Int16LE",
+                    "Int16BE",
+                    "Int32LE",
+                    "Int32BE",
+                    "Int64LE",
+                    "Int64BE",
+                    "UInt8",
+                    "UInt16LE",
+                    "UInt16BE",
+                    "UInt32LE",
+                    "UInt32BE",
+                    "UInt64LE",
+                    "UInt64BE",
+                    "FloatLE",
+                    "FloatBE",
+                    "DoubleLE",
+                    "DoubleBE"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "Recoup_Damper_Position": {
+          "allOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+            },
+            {
+              "properties": {
+                "Documentation": {
+                  "default": ""
+                },
+                "Sparkplug_Type": {
+                  "enum": [
+                    "Int8",
+                    "Int16LE",
+                    "Int16BE",
+                    "Int32LE",
+                    "Int32BE",
+                    "Int64LE",
+                    "Int64BE",
+                    "UInt8",
+                    "UInt16LE",
+                    "UInt16BE",
+                    "UInt32LE",
+                    "UInt32BE",
+                    "UInt64LE",
+                    "UInt64BE",
+                    "FloatLE",
+                    "FloatBE",
+                    "DoubleLE",
+                    "DoubleBE"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": []
+    },
+    "Temperature_Control_Loops": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Temperature_Control_Loop-v1.json"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
