@@ -21,6 +21,14 @@
         }
       },
       "type": "object"
+    },
+    "Air_Handling_Units": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Air_Handling_Unit-v1.json"
+        }
+      },
+      "type": "object"
     }
   },
   "required": [
