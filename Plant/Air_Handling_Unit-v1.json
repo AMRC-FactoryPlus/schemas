@@ -17,8 +17,13 @@
     "Intake": {
       "type": "object",
       "properties": {
-        "Temperature": {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+        "Temperatures": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+            }
+          },
+          "type": "object"
         },
         "Damper_Position": {
           "allOf": [
@@ -62,8 +67,13 @@
     "Supply": {
       "type": "object",
       "properties": {
-        "Temperature": {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+        "Temperatures": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+            }
+          },
+          "type": "object"
         },
         "Humidity": {
           "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Humidity-v1.json"
@@ -102,8 +112,13 @@
     "Extraction": {
       "type": "object",
       "properties": {
-        "Temperature": {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+        "Temperatures": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+            }
+          },
+          "type": "object"
         },
         "Air_Speed": {
           "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Flow-v1.json"
@@ -130,6 +145,14 @@
     "Exhaust": {
       "type": "object",
       "properties": {
+        "Temperatures": {
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+            }
+          },
+          "type": "object"
+        },
         "Damper_Position": {
           "allOf": [
             {
