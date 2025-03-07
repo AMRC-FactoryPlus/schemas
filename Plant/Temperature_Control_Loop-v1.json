@@ -1,0 +1,148 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Plant/Temperature_Control_Loop-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "c7939627-12fd-46af-84d5-aa69e7205f01"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "Flow_Temperature": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+    },
+    "Return_Temperature": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Sensors/Temperature-v1.json"
+    },
+    "Shutdown": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Boolean"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Demand": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Boolean"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Valve_Position": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Valve_Setpoint": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "DoubleBE",
+                "DoubleLE",
+                "FloatBE",
+                "FloatLE"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Valve_Position_Mismatch": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "Boolean"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Space_Setpoint": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": [
+                "FloatLE",
+                "FloatBE",
+                "DoubleLE",
+                "DoubleBE"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "Schema_UUID",
+    "Instance_UUID"
+  ]
+}
