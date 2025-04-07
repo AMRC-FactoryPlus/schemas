@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "Schema_UUID": {
-      "const": "777dd941-f426-4355-8130-e144530b1376"
+      "const": "f7458af9-1377-490f-bc70-55315cb09bf9"
     },
     "Instance_UUID": {
       "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
