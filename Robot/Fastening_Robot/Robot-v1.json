@@ -49,15 +49,6 @@
           "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Fastening_Robot/Fastening_End_Effector-v1.json"
         }
       }
-    },
-    "Correction_FastenerFind": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Correction_FastenerFind-v1.json"
-    },
-    "Correction_HoleFind": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Correction_HoleFind-v1.json"
-    },
-    "Correction_Laser": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Correction_Laser-v1.json"
     }
   },
   "required": ["Schema_UUID", "Instance_UUID", "Device_Information", "Axes"]
