@@ -30,42 +30,16 @@
               "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Protective_Stop-v1.json"
             }
           }
+        },
+        "Doors": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-zA-Z0-9_]*$": {
+              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Door-v1.json"
+            }
+          }
         }
       }
-    },
-    "Cell_Connected": {
-      "allOf": [
-        {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-        },
-        {
-          "properties": {
-            "Documentation": {
-              "default": ""
-            },
-            "Sparkplug_Type": {
-              "enum": ["Boolean"]
-            }
-          }
-        }
-      ]
-    },
-    "Cell_Door_Secure": {
-      "allOf": [
-        {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-        },
-        {
-          "properties": {
-            "Documentation": {
-              "default": ""
-            },
-            "Sparkplug_Type": {
-              "enum": ["Boolean"]
-            }
-          }
-        }
-      ]
     }
   },
   "required": ["Schema_UUID", "Instance_UUID"]
