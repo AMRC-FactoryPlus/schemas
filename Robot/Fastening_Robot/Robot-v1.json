@@ -58,18 +58,6 @@
     },
     "Correction_Laser": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Correction_Laser-v1.json"
-    },
-    "Cell": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Cell-v1.json"
-    },
-    "E_Stop_Overall": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Emergency_Stop-v1.json"
-    },
-    "E_Stop_SW_External": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Emergency_Stop-v1.json"
-    },
-    "E_Stop_SW_Internal": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Emergency_Stop-v1.json"
     }
   },
   "required": ["Schema_UUID", "Instance_UUID", "Device_Information", "Axes"]
