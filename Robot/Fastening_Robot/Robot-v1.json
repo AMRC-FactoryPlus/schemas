@@ -50,131 +50,6 @@
         }
       }
     },
-    "Cell": {
-      "type": "object",
-      "properties": {
-        "AIC_CELL_CONNECTED": {
-          "allOf": [
-            {
-              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-            },
-            {
-              "properties": {
-                "Documentation": {
-                  "default": ""
-                },
-                "Sparkplug_Type": {
-                  "enum": ["Boolean"]
-                }
-              }
-            }
-          ]
-        },
-        "AIC_CELL_E_STOP_PB_SW": {
-          "allOf": [
-            {
-              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-            },
-            {
-              "properties": {
-                "Documentation": {
-                  "default": ""
-                },
-                "Sparkplug_Type": {
-                  "enum": ["Boolean"]
-                }
-              }
-            }
-          ]
-        },
-        "AIC_CELL_ESTOP_STATE": {
-          "allOf": [
-            {
-              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-            },
-            {
-              "properties": {
-                "Documentation": {
-                  "default": ""
-                },
-                "Sparkplug_Type": {
-                  "enum": ["Boolean"]
-                }
-              }
-            }
-          ]
-        },
-        "AIC_CELL_SFDOOR_STATE": {
-          "allOf": [
-            {
-              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-            },
-            {
-              "properties": {
-                "Documentation": {
-                  "default": ""
-                },
-                "Sparkplug_Type": {
-                  "enum": ["Boolean"]
-                }
-              }
-            }
-          ]
-        },
-        "E_STOP_STATE_OVERALL": {
-          "allOf": [
-            {
-              "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-            },
-            {
-              "properties": {
-                "Documentation": {
-                  "default": ""
-                },
-                "Sparkplug_Type": {
-                  "enum": ["Boolean"]
-                }
-              }
-            }
-          ]
-        }
-      },
-      "required": []
-    },
-    "E_STOP_SW_EXTERNAL": {
-      "allOf": [
-        {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-        },
-        {
-          "properties": {
-            "Documentation": {
-              "default": ""
-            },
-            "Sparkplug_Type": {
-              "enum": ["Boolean"]
-            }
-          }
-        }
-      ]
-    },
-    "E_STOP_SW_INTERNAL": {
-      "allOf": [
-        {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-        },
-        {
-          "properties": {
-            "Documentation": {
-              "default": ""
-            },
-            "Sparkplug_Type": {
-              "enum": ["Boolean"]
-            }
-          }
-        }
-      ]
-    },
     "Correction_FastenerFind": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Correction_FastenerFind-v1.json"
     },
@@ -183,6 +58,18 @@
     },
     "Correction_Laser": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Correction_Laser-v1.json"
+    },
+    "Cell": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Cell-v1.json"
+    },
+    "E_Stop_Overall": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Emergency_Stop-v1.json"
+    },
+    "E_Stop_SW_External": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Emergency_Stop-v1.json"
+    },
+    "E_Stop_SW_Internal": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Cell/Emergency_Stop-v1.json"
     }
   },
   "required": ["Schema_UUID", "Instance_UUID", "Device_Information", "Axes"]
