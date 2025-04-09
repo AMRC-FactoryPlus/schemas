@@ -54,6 +54,10 @@
       "$comment": "The position of the end effector",
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Pose-v1.json"
     },
+    "Vision_System": {
+      "$comment": "The position of the end effector",
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Vision_System-v1.json"
+    },
     "Current_State": {
       "allOf": [
         {
