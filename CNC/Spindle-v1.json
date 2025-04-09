@@ -311,6 +311,9 @@
           }
         }
       ]
+    },
+    "Power_Monitoring": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Power/Phase-v2.json"
     }
   },
   "required": [
