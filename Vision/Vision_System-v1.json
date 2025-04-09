@@ -75,9 +75,24 @@
               "default": "The success status of the inspection"
             },
             "Sparkplug_Type": {
-              "enum": [
-                "Boolean"
-              ]
+              "enum": ["Boolean"]
+            }
+          }
+        }
+      ]
+    },
+    "Inspection_Complete": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": ["Boolean"]
             }
           }
         }
@@ -94,12 +109,7 @@
               "default": "The X position of the pattern in the frame"
             },
             "Sparkplug_Type": {
-              "enum": [
-                "FloatLE",
-                "FloatBE",
-                "DoubleLE",
-                "DoubleBE"
-              ]
+              "enum": ["FloatLE", "FloatBE", "DoubleLE", "DoubleBE"]
             }
           }
         }
@@ -116,20 +126,12 @@
               "default": "The Y position of the pattern in the frame"
             },
             "Sparkplug_Type": {
-              "enum": [
-                "FloatLE",
-                "FloatBE",
-                "DoubleLE",
-                "DoubleBE"
-              ]
+              "enum": ["FloatLE", "FloatBE", "DoubleLE", "DoubleBE"]
             }
           }
         }
       ]
     }
   },
-  "required": [
-    "Schema_UUID",
-    "Instance_UUID"
-  ]
+  "required": ["Schema_UUID", "Instance_UUID"]
 }

@@ -1,0 +1,32 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Robot-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DELTA Robot",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "6b0383f5-e6ea-44d9-8e82-39aa64d1a0d5"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "Device_Information": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
+    },
+    "Base_Robot": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Robot-v1.json"
+    },
+    "Fastening_End_Effectors": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_]*$": {
+          "$comment": "An end effector position identifier",
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Fastening_Robot/Fastening_End_Effector-v1.json"
+        }
+      }
+    }
+  },
+  "required": ["Schema_UUID", "Instance_UUID", "Device_Information", "Axes"]
+}

@@ -1,0 +1,1114 @@
+{
+  "$id": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Fastening_Axis-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fastening Axis",
+  "type": "object",
+  "properties": {
+    "Schema_UUID": {
+      "const": "f7458af9-1377-490f-bc70-55315cb09bf9"
+    },
+    "Instance_UUID": {
+      "description": "The unique identifier for this object. (A UUID specified by RFC4122).",
+      "type": "string",
+      "format": "uuid"
+    },
+    "Torque_Data_Logging": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": ["Boolean"]
+            }
+          }
+        }
+      ]
+    },
+    "Torque_Data_Ready": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": ["Boolean"]
+            }
+          }
+        }
+      ]
+    },
+    "Torque_Data_Overflow": {
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+        },
+        {
+          "properties": {
+            "Documentation": {
+              "default": ""
+            },
+            "Sparkplug_Type": {
+              "enum": ["Boolean"]
+            }
+          }
+        }
+      ]
+    },
+    "MC_POWER": {
+      "type": "object",
+      "properties": {
+        "Ctrl": {
+          "type": "object",
+          "properties": {
+            "Enable": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Stop_Mode": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Int8"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Start_Mode": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Int8"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "Status": {
+          "type": "object",
+          "properties": {
+            "Status": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Busy": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error_Id": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Bytes"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "MC_RESET": {
+      "type": "object",
+      "properties": {
+        "Ctrl": {
+          "type": "object",
+          "properties": {
+            "Execute": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Restart": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "Status": {
+          "type": "object",
+          "properties": {
+            "Done": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Busy": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Command_Aborted": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error_Id": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Bytes"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "MC_HALT": {
+      "type": "object",
+      "properties": {
+        "Ctrl": {
+          "type": "object",
+          "properties": {
+            "Execute": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Deceleration": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Jerk": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Abort_Acceleration": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "Status": {
+          "type": "object",
+          "properties": {
+            "Done": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Busy": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Command_Aborted": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error_Id": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Bytes"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "MC_MOVEJOG": {
+      "type": "object",
+      "properties": {
+        "Ctrl": {
+          "type": "object",
+          "properties": {
+            "Velocity": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Acceleration": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Deceleration": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Jerk": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Position_Controlled": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Jog_Backward": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Jog_Forward": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "Status": {
+          "type": "object",
+          "properties": {
+            "Busy": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Command_Aborted": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error_Id": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Bytes"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "In_Velocity": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "MC_TORQUELIMITING": {
+      "type": "object",
+      "properties": {
+        "Ctrl": {
+          "type": "object",
+          "properties": {
+            "Enable": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Limit": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Mode": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Int8"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "Status": {
+          "type": "object",
+          "properties": {
+            "Busy": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error_Id": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Bytes"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "In_Limitation": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "In_Clamping": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "MC_MOVEVELOCITY": {
+      "type": "object",
+      "properties": {
+        "Ctrl": {
+          "type": "object",
+          "properties": {
+            "Execute": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Velocity": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Acceleration": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Deceleration": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Jerk": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["FloatLE"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Direction": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Int8"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Current": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Position_Controlled": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "Status": {
+          "type": "object",
+          "properties": {
+            "In_Velocity": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Busy": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Command_Aborted": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error_Id": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Bytes"]
+                    }
+                  }
+                }
+              ]
+            },
+            "Error": {
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
+                },
+                {
+                  "properties": {
+                    "Documentation": {
+                      "default": ""
+                    },
+                    "Sparkplug_Type": {
+                      "enum": ["Boolean"]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "Base_Axis": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Axis-v1.json"
+    }
+  },
+  "required": ["Schema_UUID", "Instance_UUID", "Axis_Type"]
+}
