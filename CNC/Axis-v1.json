@@ -74,6 +74,9 @@
     },
     "Position_Indirect": {
       "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Commanded_Value-v1.json"
+    },
+    "Power_Monitoring": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Power/Phase-v2.json"
     }
   },
   "required": [
