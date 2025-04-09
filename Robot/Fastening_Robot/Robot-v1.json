@@ -12,34 +12,8 @@
       "type": "string",
       "format": "uuid"
     },
-    "Controller_UUID": {
-      "allOf": [
-        {
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Metric-v1.json"
-        },
-        {
-          "properties": {
-            "Sparkplug_Type": {
-              "enum": ["UUID"]
-            },
-            "Documentation": {
-              "default": "A reference to the controller that this robot uses"
-            }
-          }
-        }
-      ]
-    },
-    "Device_Information": {
-      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Device_Information-v1.json"
-    },
-    "Axes": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z0-9_]*$": {
-          "$comment": "An axis name or identifier - can be any regular string",
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Common/Axis-v1.json"
-        }
-      }
+    "Base_Robot": {
+      "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Robot-v1.json"
     },
     "Fastening_End_Effectors": {
       "type": "object",
