@@ -23,7 +23,7 @@
       "patternProperties": {
         "^[a-zA-Z0-9_]*$": {
           "$comment": "An end effector position identifier",
-          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Fastening_Robot/Fastening_End_Effector-v1.json"
+          "$ref": "https://raw.githubusercontent.com/AMRC-FactoryPlus/schemas/main/Robot/Fastening_Robot/Fastening_End_Effector-v1.json"
         }
       }
     }
